@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JetPrintX – Privacy Policy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet-navy':   '#0f172a',
+            'jet-blue':   '#1e40af',
+            'jet-accent': '#f97316',
+            'jet-accent-dark': '#ea580c',
+            'jet-gray':   '#64748b',
+            'jet-light':  '#f8fafc',
+          },
+          fontFamily: {
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .accordion-header {
+      transition: all 0.3s ease;
+    }
+    .accordion-header.active {
+      background-color: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid #f97316;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease-out, padding 0.45s ease-out;
+    }
+    .accordion-content.open {
+      max-height: 2400px; /* generous enough for longer sections */
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-jet-light text-jet-navy font-sans">
+
+  <!-- ============================================= -->
+  <!--                   NAVBAR                      -->
+  <!-- ============================================= -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center shadow-md">
+            <span class="text-white text-2xl font-black tracking-tighter">J</span>
+          </div>
+          <span class="text-3xl font-bold tracking-tight text-jet-navy font-display">JetPrintX</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10 font-medium">
+          <a href="/"          class="hover:text-jet-accent transition-colors">Home</a>
+          <a href="/#about"     class="hover:text-jet-accent transition-colors">About</a>
+          <a href="/products.html"  class="hover:text-jet-accent transition-colors">Products</a>
+          <a href="/services.html"  class="hover:text-jet-accent transition-colors">Services</a>
+          <a href="/terms.html"     class="hover:text-jet-accent transition-colors">Terms</a>
+          <a href="#"          class="text-jet-accent font-semibold">Privacy</a>
+        </div>
+
+        <!-- Actions + Mobile toggle -->
+        <div class="flex items-center gap-5">
+          <a href="/contact" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-jet-accent text-white font-medium rounded-full hover:bg-jet-accent-dark transition-all shadow-md shadow-orange-200/40">
+            Contact Us <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden text-2xl text-jet-navy">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+        <a href="/" class="hover:text-jet-accent">Home</a>
+        <a href="/#about" class="hover:text-jet-accent">About</a>
+        <a href="/products.html" class="hover:text-jet-accent">Products</a>
+        <a href="/services.html" class="hover:text-jet-accent">Services</a>
+        <a href="/terms.html" class="hover:text-jet-accent">Terms</a>
+        <a href="./pp.html" class="text-jet-accent">Privacy Policy</a>
+        <div class="pt-4">
+          <a href="/contact" class="block py-4 bg-jet-accent text-white text-center rounded-2xl font-semibold">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!--                PAGE HEADER                    -->
+  <!-- ============================================= -->
+  <section class="relative bg-gradient-to-br from-jet-navy via-slate-900 to-jet-blue text-white py-24 lg:py-32">
+    <div class="absolute inset-0 opacity-5 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight mb-5">
+        Privacy Policy
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto">
+        Your privacy matters to us. This policy explains how JetPrintX collects, uses, shares, and protects your personal information.
+      </p>
+      <p class="mt-6 text-slate-300 text-lg">
+        Last updated: March 1, 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--              MAIN CONTENT                     -->
+  <!-- ============================================= -->
+  <main class="py-16 lg:py-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+
+      <div class="prose prose-lg prose-slate max-w-none mb-12">
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-jet-accent">
+          <p class="text-jet-gray leading-relaxed">
+            JetPrintX Inc. (“we”, “us”, “our”) is committed to protecting your privacy. This Privacy Policy describes how we collect, use, disclose, and safeguard your information when you visit our website jetprintx.com, purchase our products, or use our services (collectively, the “Services”).
+          </p>
+        </div>
+      </div>
+
+      <!-- Accordion Sections -->
+      <div class="space-y-6">
+
+        <!-- 1. Introduction -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>1. Introduction</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We comply with applicable U.S. privacy laws, including the California Consumer Privacy Act (CCPA) as amended by the CPRA, where relevant.</p>
+            <p class="mt-4">By using our Services, you consent to the practices described in this Privacy Policy. If you do not agree, please do not use our website or services.</p>
+          </div>
+        </div>
+
+        <!-- 2. Information We Collect -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>2. Information We Collect</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We collect the following categories of personal information:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li><strong>Personal identifiers:</strong> name, email address, phone number, shipping & billing address</li>
+              <li><strong>Payment information:</strong> credit/debit card details, billing address (processed securely via third-party payment processors)</li>
+              <li><strong>Commercial information:</strong> products purchased, order history, preferences</li>
+              <li><strong>Internet / electronic activity:</strong> IP address, browser type, device information, pages visited, time spent, referring URL</li>
+              <li><strong>Geolocation data:</strong> approximate location derived from IP address (not precise GPS)</li>
+              <li><strong>Customer support data:</strong> communications, chat transcripts, support tickets</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. How We Use Your Information -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>3. How We Use Your Information</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We use your personal information for the following purposes:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li>Process and fulfill orders, including shipping and payment handling</li>
+              <li>Provide customer service, support, and warranty assistance</li>
+              <li>Send transactional emails (order confirmations, shipping updates)</li>
+              <li>Improve our website, products, and services (analytics & research)</li>
+              <li>Send marketing communications (only with your consent or as permitted by law)</li>
+              <li>Detect fraud, enforce our terms, and protect our rights</li>
+              <li>Comply with legal obligations</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 4. Cookies and Tracking Technologies -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>4. Cookies and Tracking Technologies</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We use cookies, web beacons, pixels, and similar technologies to enhance your experience and analyze usage.</p>
+            <p class="mt-4">You can manage cookie preferences through your browser settings or our cookie banner. For more details, see our <a href="#" class="text-jet-accent hover:underline">Cookie Policy</a>.</p>
+          </div>
+        </div>
+
+        <!-- 5. Sharing & Third Parties -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>5. Sharing Your Information</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We share personal information only in these limited circumstances:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li>With service providers (payment processors, shipping carriers, cloud hosting, analytics providers)</li>
+              <li>To comply with legal obligations, subpoenas, court orders, or government requests</li>
+              <li>In connection with a merger, acquisition, or sale of assets</li>
+              <li>To protect the rights, property, or safety of JetPrintX, our users, or the public</li>
+            </ul>
+            <p class="mt-4">We do not sell your personal information.</p>
+          </div>
+        </div>
+
+        <!-- 6. Data Security -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>6. Data Security</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We implement commercially reasonable technical, administrative, and physical safeguards to protect your personal information from unauthorized access, loss, misuse, or alteration.</p>
+            <p class="mt-4">No method of transmission over the Internet or electronic storage is 100% secure. We cannot guarantee absolute security.</p>
+          </div>
+        </div>
+
+        <!-- 7. Your Privacy Rights -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>7. Your Privacy Rights (U.S. Residents)</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>Depending on your state of residence, you may have the right to:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li>Know what personal information we collect and how we use/share it</li>
+              <li>Request deletion of your personal information (subject to exceptions)</li>
+              <li>Opt out of the sale or sharing of personal information (we do not sell data)</li>
+              <li>Correct inaccurate personal information</li>
+              <li>Limit use of sensitive personal information</li>
+              <li>Non-discrimination for exercising these rights</li>
+            </ul>
+            <p class="mt-6">To exercise your rights, please contact us at <a href="mailto:privacy@jetprintx.com" class="text-jet-accent hover:underline">privacy@jetprintx.com</a>.</p>
+          </div>
+        </div>
+
+        <!-- 8. Data Retention -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>8. Data Retention</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We retain personal information only as long as necessary to fulfill the purposes outlined in this policy, comply with legal obligations, resolve disputes, and enforce our agreements.</p>
+            <p class="mt-4">Order and payment data is typically retained for 7 years for tax and accounting purposes.</p>
+          </div>
+        </div>
+
+        <!-- 9. Changes to This Policy -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>9. Changes to This Privacy Policy</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We may update this Privacy Policy from time to time. We will notify you of material changes by posting the new policy on this page and updating the “Last updated” date.</p>
+            <p class="mt-4">We encourage you to review this page periodically.</p>
+          </div>
+        </div>
+
+        <!-- 10. Contact Us -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>10. Contact Us</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact our Data Protection Officer:</p>
+            <div class="mt-6 space-y-3">
+              <p><strong>Email:</strong> <a href="mailto:privacy@jetprintx.com" class="text-jet-accent hover:underline">privacy@jetprintx.com</a></p>
+              <p><strong>Mail:</strong> JetPrintX Inc.<br>Attn: Privacy Officer<br>123 Innovation Way<br>Palo Alto, CA 94301<br>United States</p>
+              <p><strong>Phone:</strong> 1-800-JET-PRINT (Mon–Fri 8 AM – 8 PM EST)</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Final CTA -->
+      <div class="mt-16 p-10 bg-white rounded-2xl shadow-sm border border-slate-200 text-center">
+        <h3 class="text-3xl font-semibold font-display mb-5">Have questions about your privacy?</h3>
+        <p class="text-xl text-jet-gray mb-8 max-w-2xl mx-auto">
+          We’re here to help and respond promptly to privacy inquiries.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-3 px-10 py-5 bg-jet-accent text-white font-bold text-lg rounded-full hover:bg-jet-accent-dark transition-all shadow-lg shadow-orange-200/40">
+          Contact Privacy Team <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================= -->
+  <!--                   FOOTER                      -->
+  <!-- ============================================= -->
+  <footer class="bg-jet-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3 mb-6 text-white">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center">
+              <span class="text-white text-2xl font-black">J</span>
+            </div>
+            <span class="text-2xl font-bold font-display">JetPrintX</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-8">
+            Premium printing hardware & services — engineered for American businesses.
+          </p>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-white font-semibold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/about" class="hover:text-jet-accent transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Legal</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/terms" class="hover:text-jet-accent transition-colors">Terms & Conditions</a></li>
+            <li><a href="/returns" class="hover:text-jet-accent transition-colors">Return Policy</a></li>
+            <li><a href="#" class="text-jet-accent font-medium">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/contact" class="hover:text-jet-accent transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Support Center</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Track Order</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-slate-700 text-center text-sm">
+        © 2026 JetPrintX Inc. • All rights reserved • Delaware corporation • United States
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Accordion functionality
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.classList.contains('open');
+
+        // Close others
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          if (c !== content) {
+            c.classList.remove('open');
+            c.style.maxHeight = null;
+            c.previousElementSibling.classList.remove('active');
+          }
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          header.classList.add('active');
+        } else {
+          content.classList.remove('open');
+          content.style.maxHeight = null;
+          header.classList.remove('active');
+        }
+      });
+    });
+
+    // Optional: open first section by default
+    document.querySelector('.accordion-header')?.click();
+  </script>
+</body>
+</html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JetPrintX – Return & Refund Policy</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet-navy': '#0f172a',
+            'jet-blue': '#1e40af',
+            'jet-accent': '#f97316',
+            'jet-accent-dark': '#ea580c',
+            'jet-gray': '#64748b',
+            'jet-light': '#f8fafc',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .accordion-header {
+      transition: all 0.3s ease;
+    }
+    .accordion-header.active {
+      background-color: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid #f97316;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+    .accordion-content.open {
+      max-height: 1800px;
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-jet-light text-jet-navy font-sans">
+
+  <!-- ============================================= -->
+  <!--                NAVBAR                         -->
+  <!-- ============================================= -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center shadow-md">
+            <span class="text-white text-2xl font-black tracking-tighter">J</span>
+          </div>
+          <span class="text-3xl font-bold tracking-tight text-jet-navy font-display">JetPrintX</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10 font-medium">
+          <a href="/"          class="hover:text-jet-accent transition-colors">Home</a>
+          <a href="/#about"     class="hover:text-jet-accent transition-colors">About</a>
+          <a href="/products.html"  class="hover:text-jet-accent transition-colors">Products</a>
+          <a href="/services.html"  class="hover:text-jet-accent transition-colors">Services</a>
+          <a href="/terms.html"     class="hover:text-jet-accent transition-colors">Terms</a>
+          <a href="#"          class="text-jet-accent font-semibold">Privacy</a>
+        </div>
+
+        <!-- Actions + Mobile toggle -->
+        <div class="flex items-center gap-5">
+          <a href="/contact" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-jet-accent text-white font-medium rounded-full hover:bg-jet-accent-dark transition-all shadow-md shadow-orange-200/40">
+            Contact Us <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden text-2xl text-jet-navy">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+        <a href="/" class="hover:text-jet-accent">Home</a>
+        <a href="/#about" class="hover:text-jet-accent">About</a>
+        <a href="/products.html" class="hover:text-jet-accent">Products</a>
+        <a href="/services.html" class="hover:text-jet-accent">Services</a>
+        <a href="/terms.html" class="hover:text-jet-accent">Terms</a>
+        <a href="./pp.html" class="text-jet-accent">Privacy Policy</a>
+        <div class="pt-4">
+          <a href="/contact" class="block py-4 bg-jet-accent text-white text-center rounded-2xl font-semibold">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!--                PAGE HEADER                    -->
+  <!-- ============================================= -->
+  <section class="relative bg-gradient-to-br from-jet-navy via-slate-900 to-jet-blue text-white py-24 lg:py-32">
+    <div class="absolute inset-0 opacity-5 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight mb-5">
+        Return & Refund Policy
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto">
+        Your satisfaction is our top priority. We’ve designed this policy to make returns and refunds simple and fair.
+      </p>
+      <p class="mt-6 text-slate-300 text-lg">
+        Last updated: March 1, 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--              MAIN CONTENT                     -->
+  <!-- ============================================= -->
+  <main class="py-16 lg:py-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+
+      <div class="prose prose-lg prose-slate max-w-none mb-12">
+        <div class="p-8 bg-white rounded-2xl shadow-sm border border-slate-200 border-l-4 border-l-jet-accent">
+          <p class="text-jet-gray leading-relaxed">
+            JetPrintX is committed to your complete satisfaction with every purchase. This Return and Refund Policy applies to products purchased directly from jetprintx.com or our authorized U.S. sales channels. Please read it carefully.
+          </p>
+        </div>
+      </div>
+
+      <!-- Accordion Sections -->
+      <div class="space-y-6">
+
+        <!-- 1. Eligibility for Returns -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>1. Eligibility for Returns</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>To be eligible for a return, the item must meet all of the following conditions:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li>Returned within <strong>30 calendar days</strong> of delivery date</li>
+              <li>In original, unopened packaging (unless defective)</li>
+              <li>Unused, undamaged, and in resalable condition</li>
+              <li>Accompanied by original proof of purchase (order number or invoice)</li>
+              <li>Includes all accessories, manuals, cables, and packaging materials</li>
+            </ul>
+            <p class="mt-6">Products showing signs of use beyond basic inspection (test prints, removed protective films, etc.) may be subject to a restocking fee of up to 15% or denied return entirely.</p>
+          </div>
+        </div>
+
+        <!-- 2. Non-Returnable Items -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>2. Non-Returnable / Non-Refundable Items</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>The following items cannot be returned or refunded unless they arrive damaged or defective:</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li>Ink cartridges, toner, and other consumables (opened or used)</li>
+              <li>Custom-configured or personalized printers</li>
+              <li>Opened software, firmware updates, or digital downloads</li>
+              <li>Items marked “Final Sale” or “Clearance” at time of purchase</li>
+              <li>Products damaged due to customer misuse, negligence, or unauthorized repair</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3. Return Process -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>3. How to Initiate a Return</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <ol class="list-decimal pl-6 mt-4 space-y-3">
+              <li><strong>Contact us</strong> within 30 days of delivery at <a href="mailto:returns@jetprintx.com" class="text-jet-accent hover:underline">returns@jetprintx.com</a> or 1-800-JET-PRINT. Provide your order number and reason for return.</li>
+              <li>We will issue a <strong>Return Merchandise Authorization (RMA)</strong> number and return instructions (usually within 24 business hours).</li>
+              <li>Pack the item securely in its original packaging (or equivalent), including all accessories and the RMA number clearly visible on the outside of the box.</li>
+              <li>Ship the item to the address provided in the RMA instructions using a trackable shipping method.</li>
+              <li>Once received and inspected, we will process your refund or exchange (typically within 5–10 business days).</li>
+            </ol>
+          </div>
+        </div>
+
+        <!-- 4. Refund Process -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>4. Refund Process & Timing</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>Refunds are issued to the original payment method used for the purchase.</p>
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li><strong>Credit/Debit Cards:</strong> 5–10 business days after we receive and inspect the return</li>
+              <li><strong>PayPal / ACH:</strong> 3–7 business days</li>
+              <li><strong>Original shipping fees are non-refundable</strong> unless the return is due to our error (wrong item, defective on arrival)</li>
+            </ul>
+            <p class="mt-6">We reserve the right to refuse refunds or impose restocking fees if the product does not meet return conditions.</p>
+          </div>
+        </div>
+
+        <!-- 5. Exchanges -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>5. Exchanges</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>If you received a defective, damaged, or incorrect item, we will gladly arrange an exchange at no additional cost to you (including return shipping).</p>
+            <p class="mt-4">For change-of-mind exchanges (different model, color, etc.), standard return shipping fees apply and a restocking fee may be charged if the item has been used.</p>
+          </div>
+        </div>
+
+        <!-- 6. Shipping Costs -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>6. Shipping & Return Costs</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <ul class="list-disc pl-6 mt-4 space-y-2">
+              <li><strong>Original outbound shipping:</strong> Non-refundable (unless we sent the wrong/defective item)</li>
+              <li><strong>Return shipping:</strong> Customer responsibility for change-of-mind returns</li>
+              <li><strong>Defective / wrong item returns:</strong> We provide a prepaid return label or reimburse reasonable shipping costs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 7. Contact for Returns -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+          <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+            <span>7. Contact Us for Returns or Questions</span>
+            <i class="fa-solid fa-chevron-down transition-transform"></i>
+          </button>
+          <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+            <p>We're here to help. Reach our Returns team:</p>
+            <div class="mt-6 space-y-4">
+              <p><strong>Email:</strong> <a href="mailto:returns@jetprintx.com" class="text-jet-accent hover:underline">returns@jetprintx.com</a></p>
+              <p><strong>Phone:</strong> 1-800-JET-PRINT (Mon–Fri 8 AM – 8 PM EST)</p>
+              <p><strong>Mail:</strong> JetPrintX Returns Dept<br>123 Innovation Way, Palo Alto, CA 94301</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- CTA -->
+      <div class="mt-16 p-10 bg-white rounded-2xl shadow-sm border border-slate-200 text-center">
+        <h3 class="text-3xl font-semibold font-display mb-5">Need help with a return or refund?</h3>
+        <p class="text-xl text-jet-gray mb-8 max-w-2xl mx-auto">
+          Our team is ready to assist you quickly and professionally.
+        </p>
+        <a href="/contact" class="inline-flex items-center gap-3 px-10 py-5 bg-jet-accent text-white font-bold text-lg rounded-full hover:bg-jet-accent-dark transition-all shadow-lg shadow-orange-200/40">
+          Contact Support <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- ============================================= -->
+  <!--                  FOOTER                       -->
+  <!-- ============================================= -->
+  <footer class="bg-jet-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3 mb-6 text-white">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center">
+              <span class="text-white text-2xl font-black">J</span>
+            </div>
+            <span class="text-2xl font-bold font-display">JetPrintX</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-8">
+            Premium printing solutions built for American businesses.
+          </p>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-white font-semibold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/about" class="hover:text-jet-accent transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Legal</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/terms" class="hover:text-jet-accent transition-colors">Terms & Conditions</a></li>
+            <li><a href="#" class="text-jet-accent font-medium">Return & Refund Policy</a></li>
+            <li><a href="/privacy" class="hover:text-jet-accent transition-colors">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/contact" class="hover:text-jet-accent transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Returns Center</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Track Order</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-slate-700 text-center text-sm">
+        © 2026 JetPrintX Inc. • All rights reserved • Proudly serving the United States
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Accordion functionality
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.classList.contains('open');
+
+        // Close all others
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          c.classList.remove('open');
+          c.style.maxHeight = null;
+          c.previousElementSibling.classList.remove('active');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          header.classList.add('active');
+        }
+      });
+    });
+
+    // Optional: open first section by default
+    document.querySelector('.accordion-header')?.click();
+  </script>
+</body>
+</html>

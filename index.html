@@ -1,0 +1,1299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JetPrintX | Premium Printing Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Poppins:wght@500;600&amp;display=swap");
+
+      :root {
+        --primary: 10 37 64;
+      }
+
+      .tail-container {
+        font-family: "Inter", system_ui, sans-serif;
+      }
+
+      .logo-font {
+        font-family: "Poppins", sans-serif;
+      }
+
+      .hero-bg {
+        background: linear-gradient(135deg, #0a2540 0%, #1e3a8a 100%);
+      }
+
+      .nav-link {
+        position: relative;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .nav-link:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: rgb(249 115 22);
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover:after {
+        width: 100%;
+      }
+
+      .card-hover {
+        transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      }
+
+      .card-hover:hover {
+        transform: translateY(-12px) scale(1.03);
+        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+      }
+
+      .stat-number {
+        font-variant-numeric: tabular-nums;
+      }
+
+      .hero-printer {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-25px);
+        }
+      }
+
+      .section-header {
+        position: relative;
+      }
+
+      .section-header:after {
+        content: "";
+        position: absolute;
+        width: 80px;
+        height: 3px;
+        background: linear-gradient(to right, #f97316, #eab308);
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 9999px;
+      }
+    </style>
+
+    <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet-navy':   '#0f172a',
+            'jet-blue':   '#1e40af',
+            'jet-accent': '#f97316',
+            'jet-accent-dark': '#ea580c',
+            'jet-gray':   '#64748b',
+            'jet-light':  '#f8fafc',
+          },
+          fontFamily: {
+            sans:    ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .accordion-header {
+      transition: all 0.3s ease;
+    }
+    .accordion-header.active {
+      background-color: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid #f97316;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.45s ease-out, padding 0.45s ease-out;
+    }
+    .accordion-content.open {
+      max-height: 2400px; /* generous enough for longer sections */
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+  </head>
+  <body class="tail-container text-slate-900 overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav
+      class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm"
+    >
+      <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+          <!-- Logo -->
+          <a href="/" class="flex items-center gap-3">
+            <div
+              class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center shadow-md"
+            >
+              <span class="text-white text-2xl font-black tracking-tighter"
+                >J</span
+              >
+            </div>
+            <span
+              class="text-3xl font-bold tracking-tight text-jet-navy font-display"
+              >JetPrintX</span
+            >
+          </a>
+
+          <!-- Desktop Nav -->
+          <div class="hidden lg:flex items-center gap-10 font-medium">
+            <a href="/" class="text-jet-accent transition-colors">Home</a>
+            <a href="/#about" class="hover:text-jet-accent transition-colors"
+              >About</a
+            >
+            <a
+              href="/products.html"
+              class="hover:text-jet-accent transition-colors"
+              >Products</a
+            >
+            <a
+              href="/services.html"
+              class="hover:text-jet-accent transition-colors"
+              >Services</a
+            >
+            <a
+              href="/terms.html"
+              class="hover:text-jet-accent transition-colors"
+              >Terms</a
+            >
+            <a href="/pp.html" class="hover:text-jet-accent font-semibold"
+              >Privacy</a
+            >
+          </div>
+
+          <!-- Actions + Mobile toggle -->
+          <div class="flex items-center gap-5">
+            <a
+              href="/contact"
+              class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-jet-accent text-white font-medium rounded-full hover:bg-jet-accent-dark transition-all shadow-md shadow-orange-200/40"
+            >
+              Contact Us <i class="fa-solid fa-arrow-right ml-1"></i>
+            </a>
+            <button
+              id="mobile-menu-btn"
+              class="lg:hidden text-2xl text-jet-navy"
+            >
+              <i class="fa-solid fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+        <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+          <a href="/" class="text-jet-accent">Home</a>
+          <a href="/#about" class="hover:text-jet-accent">About</a>
+          <a href="/products.html" class="hover:text-jet-accent">Products</a>
+          <a href="/services.html" class="hover:text-jet-accent">Services</a>
+          <a href="/terms.html" class="hover:text-jet-accent">Terms</a>
+          <a href="./pp.html" class="hover:text-jet-accent">Privacy Policy</a>
+          <div class="pt-4">
+            <a
+              href="/contact"
+              class="block py-4 bg-jet-accent text-white text-center rounded-2xl font-semibold"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section
+      id="home"
+      class="hero-bg text-white min-h-screen flex items-center relative overflow-hidden"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center pt-16 md:pt-0"
+      >
+        <!-- Left Content -->
+        <div class="space-y-8 z-10">
+          <div
+            class="inline-flex items-center gap-x-2 bg-white/10 backdrop-blur-md px-5 py-2 rounded-3xl text-sm font-medium"
+          >
+            <div
+              class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"
+            ></div>
+            <span>Now shipping across USA</span>
+          </div>
+
+          <h1
+            class="text-5xl md:text-7xl font-semibold leading-none tracking-tighter logo-font"
+          >
+            HIGH-PERFORMANCE<br />PRINTING FOR<br />AMERICAN BUSINESSES
+          </h1>
+
+          <p class="max-w-lg text-xl text-slate-200">
+            Engineered in California. Built for speed, quality, and reliability.
+            The only printer you'll ever need.
+          </p>
+
+          <div class="flex flex-wrap gap-4">
+            <button
+              onclick="
+                document
+                  .getElementById('products')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="flex-1 md:flex-none px-10 py-6 bg-white text-slate-900 font-semibold rounded-3xl text-lg shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 flex items-center justify-center gap-x-3"
+            >
+              <span>Shop Printers</span>
+              <i class="fa-solid fa-arrow-right text-orange-500"></i>
+            </button>
+
+            <button
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="flex-1 md:flex-none px-10 py-6 border-2 border-white/70 hover:border-white font-medium rounded-3xl text-lg transition-all"
+            >
+              Get Instant Quote
+            </button>
+          </div>
+
+          <div class="flex items-center gap-x-8 pt-6">
+            <div class="flex -space-x-4">
+              <div
+                class="w-8 h-8 bg-white rounded-2xl border-2 border-slate-800 flex items-center justify-center text-xs font-bold"
+              >
+                ★
+              </div>
+              <div
+                class="w-8 h-8 bg-white rounded-2xl border-2 border-slate-800 flex items-center justify-center text-xs font-bold"
+              >
+                ★
+              </div>
+            </div>
+            <div>
+              <div class="text-amber-300 text-sm font-medium">
+                4.98 • 2,847 reviews
+              </div>
+              <div class="text-xs text-slate-400">
+                Trusted by Fortune 500 &amp; small businesses
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="relative flex justify-center">
+          <div class="relative">
+            <!-- Printer Image -->
+            <img
+              src="16f7b947381a9dd725b1fea54e59325b.jpg"
+              alt="JetPrintX Pro Series Printer"
+              class="hero-printer w-full max-w-[520px] rounded-3xl shadow-2xl shadow-black/40"
+            />
+
+            <!-- Floating badges -->
+            <div
+              class="absolute -top-6 -right-6 bg-white text-slate-900 rounded-3xl shadow-xl px-6 py-4 flex items-center gap-x-3"
+            >
+              <div class="text-4xl">⚡</div>
+              <div>
+                <div class="font-semibold text-sm">Prints 85 ppm</div>
+                <div class="text-xs text-slate-500">Lightning fast</div>
+              </div>
+            </div>
+
+            <div
+              class="absolute -bottom-8 -left-8 bg-white/90 backdrop-blur-xl text-slate-900 rounded-3xl shadow-xl px-8 py-5"
+            >
+              <div class="flex items-center gap-x-2">
+                <i class="fa-solid fa-medal text-amber-500 text-3xl"></i>
+                <div class="text-sm">
+                  <div class="font-semibold">2025 Best Printer</div>
+                  <div class="text-slate-500 text-xs">PC Magazine Award</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Glow effect -->
+            <div
+              class="absolute inset-0 bg-gradient-to-tr from-orange-400/20 to-transparent rounded-3xl -z-10 scale-110 blur-3xl"
+            ></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div
+        class="absolute bottom-10 left-1/2 hidden md:flex flex-col items-center gap-y-2 text-white/70"
+      >
+        <div class="text-xs tracking-[3px] font-medium">SCROLL TO EXPLORE</div>
+        <div
+          class="w-px h-12 bg-gradient-to-b from-transparent via-white/40 to-transparent"
+        ></div>
+      </div>
+
+      <!-- Trust logos -->
+      <div
+        class="absolute bottom-8 right-8 hidden xl:flex items-center gap-x-8 text-white/40 text-xs font-medium"
+      >
+        <div>HP</div>
+        <div>Canon</div>
+        <div>EPSON</div>
+        <div>Brother</div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-12 gap-16 items-center">
+          <div class="md:col-span-5">
+            <img
+              src="08ff80cc2673b2632c8fedb14c4bce64.jpg"
+              alt="JetPrintX Factory"
+              class="rounded-3xl shadow-2xl"
+            />
+          </div>
+
+          <div class="md:col-span-7 space-y-8">
+            <div
+              class="inline-flex items-center px-6 py-2.5 bg-orange-100 text-orange-600 rounded-3xl text-sm font-semibold"
+            >
+              <i class="fa-solid fa-flag-usa mr-2"></i>
+              CALIFORNIA ENGINEERED • USA SUPPORT
+            </div>
+
+            <h2 class="text-5xl font-semibold tracking-tighter leading-none">
+              American innovation.<br />World-class performance.
+            </h2>
+
+            <p class="text-lg text-slate-600 max-w-2xl">
+              JetPrintX was founded in Silicon Valley with one mission: deliver
+              printers that exceed the expectations of modern American
+              businesses. Our machines combine German precision engineering with
+              American design thinking.
+            </p>
+
+            <div class="grid grid-cols-3 gap-6 pt-6">
+              <div>
+                <div class="text-4xl font-semibold text-orange-500">15+</div>
+                <div class="text-sm font-medium text-slate-500">
+                  Years of excellence
+                </div>
+              </div>
+              <div>
+                <div class="text-4xl font-semibold text-orange-500">98%</div>
+                <div class="text-sm font-medium text-slate-500">
+                  Repeat customers
+                </div>
+              </div>
+              <div>
+                <div class="text-4xl font-semibold text-orange-500">50K+</div>
+                <div class="text-sm font-medium text-slate-500">
+                  Printers shipped
+                </div>
+              </div>
+            </div>
+
+            <button
+              onclick="
+                document
+                  .getElementById('contact')
+                  .scrollIntoView({ behavior: 'smooth' })
+              "
+              class="mt-8 flex items-center gap-x-4 group"
+            >
+              <span class="text-lg font-medium">Meet our team →</span>
+              <div
+                class="w-12 h-px bg-slate-300 group-hover:bg-orange-500 transition-colors"
+              ></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="py-24 bg-slate-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <span
+            class="px-6 py-2 bg-white shadow text-orange-600 rounded-3xl text-sm font-semibold"
+            >WHY BUSINESSES CHOOSE JETPRINTX</span
+          >
+          <h2 class="mt-4 text-5xl font-semibold tracking-tighter">
+            Next-level printing technology
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <!-- Feature 1 -->
+          <div class="bg-white rounded-3xl p-8 card-hover">
+            <div
+              class="w-14 h-14 bg-orange-100 text-orange-500 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-bolt text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-2xl mb-3">Lightning Speed</h3>
+            <p class="text-slate-600">
+              Up to 85 pages per minute with zero warm-up time. First print in
+              under 4 seconds.
+            </p>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="bg-white rounded-3xl p-8 card-hover">
+            <div
+              class="w-14 h-14 bg-blue-100 text-blue-500 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-print text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-2xl mb-3">Crystal Quality</h3>
+            <p class="text-slate-600">
+              True 4800 × 2400 dpi resolution. Vibrant colors that pop on any
+              paper stock.
+            </p>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="bg-white rounded-3xl p-8 card-hover">
+            <div
+              class="w-14 h-14 bg-emerald-100 text-emerald-500 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-leaf text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-2xl mb-3">Eco Smart</h3>
+            <p class="text-slate-600">
+              Uses 68% less energy than competitors. Recyclable cartridges
+              included.
+            </p>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="bg-white rounded-3xl p-8 card-hover">
+            <div
+              class="w-14 h-14 bg-purple-100 text-purple-500 rounded-2xl flex items-center justify-center mb-6"
+            >
+              <i class="fa-solid fa-wifi text-3xl"></i>
+            </div>
+            <h3 class="font-semibold text-2xl mb-3">Smart Connected</h3>
+            <p class="text-slate-600">
+              Cloud printing, mobile app, voice control, and AI-powered
+              maintenance alerts.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-semibold tracking-tighter">
+            Complete printing ecosystem
+          </h2>
+          <p class="mt-3 text-slate-600 max-w-md mx-auto">
+            From installation to lifetime support — we've got you covered
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <div
+            class="group bg-slate-50 hover:bg-white border border-transparent hover:border-orange-200 rounded-3xl p-10 transition-all card-hover"
+          >
+            <i class="fa-solid fa-wrench text-4xl text-orange-500 mb-8"></i>
+            <h4 class="font-semibold text-2xl mb-2">On-site Maintenance</h4>
+            <p class="text-slate-600">
+              Next-business-day service across all 50 states. 24-month warranty
+              standard.
+            </p>
+          </div>
+
+          <div
+            class="group bg-slate-50 hover:bg-white border border-transparent hover:border-orange-200 rounded-3xl p-10 transition-all card-hover"
+          >
+            <i class="fa-solid fa-palette text-4xl text-orange-500 mb-8"></i>
+            <h4 class="font-semibold text-2xl mb-2">Custom Solutions</h4>
+            <p class="text-slate-600">
+              Branding, large-format printing, and custom firmware for
+              enterprise needs.
+            </p>
+          </div>
+
+          <div
+            class="group bg-slate-50 hover:bg-white border border-transparent hover:border-orange-200 rounded-3xl p-10 transition-all card-hover"
+          >
+            <i
+              class="fa-solid fa-boxes-packing text-4xl text-orange-500 mb-8"
+            ></i>
+            <h4 class="font-semibold text-2xl mb-2">Bulk Enterprise Orders</h4>
+            <p class="text-slate-600">
+              Volume discounts up to 40%. Dedicated account manager included.
+            </p>
+          </div>
+
+          <div
+            class="group bg-slate-50 hover:bg-white border border-transparent hover:border-orange-200 rounded-3xl p-10 transition-all card-hover"
+          >
+            <i class="fa-solid fa-headset text-4xl text-orange-500 mb-8"></i>
+            <h4 class="font-semibold text-2xl mb-2">24/7 US Support</h4>
+            <p class="text-slate-600">
+              Real humans in California. Live chat, phone, and remote
+              diagnostics.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section id="products" class="py-24 bg-slate-900 text-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between items-end mb-12">
+          <div>
+            <span class="text-orange-400 font-medium">SHOP OUR RANGE</span>
+            <h2 class="text-5xl font-semibold tracking-tighter">
+              Find your perfect printer
+            </h2>
+          </div>
+          <a
+            onclick="
+              document
+                .getElementById('contact')
+                .scrollIntoView({ behavior: 'smooth' })
+            "
+            class="hidden md:flex items-center gap-x-3 text-sm font-medium group"
+          >
+            NEED HELP CHOOSING?
+            <span class="transition-transform group-hover:translate-x-2"
+              >→</span
+            >
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Product 1 -->
+          <div class="bg-slate-800 rounded-3xl overflow-hidden card-hover">
+            <div
+              class="h-80 bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center p-8"
+            >
+              <img
+                src="010f898748c97fef46705604af939e2a.jpg"
+                alt="JetPrintX Pro 8500"
+                class="max-h-72 object-contain drop-shadow-2xl"
+              />
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="text-orange-400 text-sm font-medium">
+                    LASER • COLOR
+                  </div>
+                  <h4 class="text-2xl font-semibold">Pro 8500</h4>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-slate-400">STARTING AT</div>
+                  <div class="text-4xl font-semibold">$1,299</div>
+                </div>
+              </div>
+              <p class="mt-6 text-slate-400 text-sm line-clamp-3">
+                85 ppm • Duplex • 4800 dpi • Cloud-ready • 5-year warranty
+              </p>
+              <button
+                onclick="addToCart(1)"
+                class="mt-8 w-full py-5 bg-white text-slate-900 font-semibold rounded-3xl hover:bg-orange-400 hover:text-white transition-all"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="bg-slate-800 rounded-3xl overflow-hidden card-hover">
+            <div
+              class="h-80 bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center p-8"
+            >
+              <img
+                src="a9147d602cf53dab781b088bb6b90136.jpg"
+                alt="JetPrintX InkJet Elite"
+                class="max-h-72 object-contain drop-shadow-2xl"
+              />
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="text-orange-400 text-sm font-medium">
+                    INKJET • PHOTO
+                  </div>
+                  <h4 class="text-2xl font-semibold">Elite Photo</h4>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-slate-400">STARTING AT</div>
+                  <div class="text-4xl font-semibold">$899</div>
+                </div>
+              </div>
+              <p class="mt-6 text-slate-400 text-sm line-clamp-3">
+                Professional photo printing • Borderless • 1200 dpi • WiFi 6
+              </p>
+              <button
+                onclick="addToCart(2)"
+                class="mt-8 w-full py-5 bg-white text-slate-900 font-semibold rounded-3xl hover:bg-orange-400 hover:text-white transition-all"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="bg-slate-800 rounded-3xl overflow-hidden card-hover">
+            <div
+              class="h-80 bg-gradient-to-br from-slate-700 to-slate-900 flex items-center justify-center p-8"
+            >
+              <img
+                src="bbbcbcf0a541fdd2b5d9e6e350b8f685.jpg"
+                alt="JetPrintX Compact"
+                class="max-h-72 object-contain drop-shadow-2xl"
+              />
+            </div>
+            <div class="p-8">
+              <div class="flex justify-between items-start">
+                <div>
+                  <div class="text-orange-400 text-sm font-medium">
+                    PORTABLE • B&amp;W
+                  </div>
+                  <h4 class="text-2xl font-semibold">Compact X1</h4>
+                </div>
+                <div class="text-right">
+                  <div class="text-xs text-slate-400">STARTING AT</div>
+                  <div class="text-4xl font-semibold">$399</div>
+                </div>
+              </div>
+              <p class="mt-6 text-slate-400 text-sm line-clamp-3">
+                Battery powered • 22 ppm • Wireless • Perfect for field teams
+              </p>
+              <button
+                onclick="addToCart(3)"
+                class="mt-8 w-full py-5 bg-white text-slate-900 font-semibold rounded-3xl hover:bg-orange-400 hover:text-white transition-all"
+              >
+                BUY NOW
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="py-24 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+          <h2 class="text-5xl font-semibold tracking-tighter">
+            Real Americans. Real results.
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="bg-slate-50 rounded-3xl p-10">
+            <div class="flex gap-x-1 text-amber-400 text-2xl mb-8">★★★★☆</div>
+            <p class="text-lg leading-relaxed">
+              "The Pro 8500 cut our print costs by 43% in the first month.
+              Support is actually amazing — they answered at 7pm on a Friday."
+            </p>
+            <div class="mt-10 flex items-center gap-x-4">
+              <div class="w-12 h-12 bg-zinc-300 rounded-2xl"></div>
+              <div>
+                <div class="font-semibold">Sarah M. Thompson</div>
+                <div class="text-sm text-slate-500">
+                  CEO, Thompson Logistics • Texas
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="bg-slate-50 rounded-3xl p-10">
+            <div class="flex gap-x-1 text-amber-400 text-2xl mb-8">★★★★★</div>
+            <p class="text-lg leading-relaxed">
+              "We replaced 14 old HP machines with JetPrintX. Our team loves the
+              mobile app and the prints are museum-quality."
+            </p>
+            <div class="mt-10 flex items-center gap-x-4">
+              <div class="w-12 h-12 bg-blue-300 rounded-2xl"></div>
+              <div>
+                <div class="font-semibold">Michael Rivera</div>
+                <div class="text-sm text-slate-500">
+                  Creative Director, Rivera Marketing • California
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="bg-slate-50 rounded-3xl p-10">
+            <div class="flex gap-x-1 text-amber-400 text-2xl mb-8">★★★★★</div>
+            <p class="text-lg leading-relaxed">
+              "The Compact X1 is a game-changer for our field sales team. Prints
+              contracts on-site and connects instantly to our CRM."
+            </p>
+            <div class="mt-10 flex items-center gap-x-4">
+              <div class="w-12 h-12 bg-emerald-300 rounded-2xl"></div>
+              <div>
+                <div class="font-semibold">David Chen</div>
+                <div class="text-sm text-slate-500">
+                  VP Sales, Apex Insurance • New York
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-20 bg-gradient-to-r from-slate-900 to-black text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-y-12"
+      >
+        <div class="text-center">
+          <div id="clients" class="stat-number text-7xl font-semibold mb-1">
+            4872
+          </div>
+          <div class="text-slate-400 font-medium">Happy Clients Nationwide</div>
+        </div>
+        <div class="text-center">
+          <div id="printers" class="stat-number text-7xl font-semibold mb-1">
+            28491
+          </div>
+          <div class="text-slate-400 font-medium">Printers Delivered</div>
+        </div>
+        <div class="text-center">
+          <div id="years" class="stat-number text-7xl font-semibold mb-1">
+            15
+          </div>
+          <div class="text-slate-400 font-medium">Years of Innovation</div>
+        </div>
+        <div class="text-center">
+          <div
+            id="satisfaction"
+            class="stat-number text-7xl font-semibold mb-1"
+          >
+            98.7
+          </div>
+          <div class="text-slate-400 font-medium">% Satisfaction Rate</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section
+      id="contact"
+      class="py-32 bg-gradient-to-r from-slate-900 to-black text-white overflow-hidden relative"
+    >
+      <div
+        class="absolute top-0 right-0 w-[500px] h-[500px] bg-orange-500/5 blur-[120px] rounded-full -mr-64 -mt-64"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid lg:grid-cols-12 gap-20">
+          <div class="lg:col-span-5">
+            <span
+              class="text-orange-500 font-bold tracking-[0.3em] uppercase text-xs"
+              >Inquiry</span
+            >
+            <h2
+              class="mt-6 text-6xl xl:text-7xl font-light tracking-tighter leading-none"
+            >
+              Elevate your <br />
+              <span class="italic font-serif text-orange-200"
+                >infrastructure.</span
+              >
+            </h2>
+
+            <p class="mt-8 text-slate-400 text-lg max-w-md leading-relaxed">
+              Our specialists provide white-glove consultation to integrate
+              JetPrintX systems into your existing workflow.
+            </p>
+
+            <div class="mt-16 space-y-10">
+              <div class="group cursor-pointer">
+                <p
+                  class="text-xs uppercase tracking-widest text-slate-500 mb-2"
+                >
+                  Global Support
+                </p>
+                <p
+                  class="text-2xl font-light group-hover:text-orange-400 transition-colors underline underline-offset-8 decoration-white/10"
+                >
+                  concierge@jetprintx.com
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="mt-24 inline-flex items-center gap-4 px-6 py-3 rounded-full border border-white/5 bg-white/5 backdrop-blur-md"
+            >
+              <div class="flex -space-x-2">
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-[#05070a] bg-slate-400"
+                ></div>
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-[#05070a] bg-slate-500"
+                ></div>
+                <div
+                  class="w-8 h-8 rounded-full border-2 border-[#05070a] bg-slate-600"
+                ></div>
+              </div>
+              <span
+                class="text-xs font-medium text-slate-400 tracking-wide uppercase"
+                >Specialists online now</span
+              >
+            </div>
+          </div>
+
+          <div class="lg:col-span-7">
+            <form
+              id="contact-form"
+              onsubmit="handleSubmit(event)"
+              class="bg-white/[0.02] border border-white/10 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl"
+            >
+              <div class="space-y-12">
+                <div class="grid md:grid-cols-2 gap-10">
+                  <div class="relative group">
+                    <input
+                      type="text"
+                      id="name"
+                      required
+                      placeholder=" "
+                      class="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-orange-500 transition-colors placeholder-transparent"
+                    />
+                    <label
+                      for="name"
+                      class="absolute left-0 top-4 text-slate-500 transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-orange-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
+                      >Full Name</label
+                    >
+                  </div>
+                  <div class="relative group">
+                    <input
+                      type="email"
+                      id="email"
+                      required
+                      placeholder=" "
+                      class="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-orange-500 transition-colors placeholder-transparent"
+                    />
+                    <label
+                      for="email"
+                      class="absolute left-0 top-4 text-slate-500 transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-orange-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
+                      >Business Email</label
+                    >
+                  </div>
+                </div>
+
+                <div>
+                  <p
+                    class="text-xs uppercase tracking-widest text-slate-500 mb-6"
+                  >
+                    Select System Interest
+                  </p>
+                  <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <label class="cursor-pointer group">
+                      <input
+                        type="radio"
+                        name="printer_type"
+                        value="industrial"
+                        class="peer hidden"
+                        checked
+                      />
+                      <div
+                        class="py-4 px-2 text-center rounded-2xl border border-white/10 bg-white/5 peer-checked:border-orange-500 peer-checked:bg-orange-500/10 group-hover:bg-white/10 transition-all"
+                      >
+                        <span class="text-sm font-medium">Industrial</span>
+                      </div>
+                    </label>
+                    <label class="cursor-pointer group">
+                      <input
+                        type="radio"
+                        name="printer_type"
+                        value="enterprise"
+                        class="peer hidden"
+                      />
+                      <div
+                        class="py-4 px-2 text-center rounded-2xl border border-white/10 bg-white/5 peer-checked:border-orange-500 peer-checked:bg-orange-500/10 group-hover:bg-white/10 transition-all"
+                      >
+                        <span class="text-sm font-medium">Enterprise</span>
+                      </div>
+                    </label>
+                    <label class="cursor-pointer group">
+                      <input
+                        type="radio"
+                        name="printer_type"
+                        value="bespoke"
+                        class="peer hidden"
+                      />
+                      <div
+                        class="py-4 px-2 text-center rounded-2xl border border-white/10 bg-white/5 peer-checked:border-orange-500 peer-checked:bg-orange-500/10 group-hover:bg-white/10 transition-all"
+                      >
+                        <span class="text-sm font-medium">Bespoke</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="relative group">
+                  <textarea
+                    id="message"
+                    rows="3"
+                    required
+                    placeholder=" "
+                    class="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-orange-500 transition-colors resize-none placeholder-transparent"
+                  ></textarea>
+                  <label
+                    for="message"
+                    class="absolute left-0 top-4 text-slate-500 transition-all peer-focus:-top-4 peer-focus:text-xs peer-focus:text-orange-500 peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs"
+                    >Brief project details</label
+                  >
+                </div>
+
+                <button
+                  type="submit"
+                  class="group relative w-full overflow-hidden rounded-2xl bg-orange-500 py-6 font-bold text-black transition-all hover:bg-orange-400 active:scale-[0.98]"
+                >
+                  <div
+                    class="relative z-10 flex items-center justify-center gap-3"
+                  >
+                    <span>REQUEST BESPOKE QUOTE</span>
+                    <i
+                      class="fa-solid fa-arrow-right group-hover:translate-x-2 transition-transform"
+                    ></i>
+                  </div>
+                </button>
+
+                <p
+                  class="text-center text-[10px] text-slate-500 tracking-[0.2em] uppercase"
+                >
+                  Encrypted transmission • Privacy Policy applies
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-slate-950 text-slate-400">
+      <div class="max-w-7xl mx-auto px-6 pt-20 pb-12">
+        <div class="grid md:grid-cols-12 gap-y-16">
+          <!-- Col 1 -->
+          <div class="md:col-span-4">
+            <div class="flex items-center gap-x-3 text-white mb-6">
+              <div
+                class="w-9 h-9 bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl flex items-center justify-center"
+              >
+                <span
+                  class="text-white text-4xl leading-none font-black logo-font"
+                  >J</span
+                >
+              </div>
+              <span class="logo-font text-4xl font-semibold tracking-tighter"
+                >JetPrintX</span
+              >
+            </div>
+            <p class="max-w-xs">
+              Premium printers for the American dream. Engineered better.
+              Supported better.
+            </p>
+
+            <div class="flex gap-x-6 mt-12">
+              <i
+                class="fa-brands fa-x-twitter text-2xl hover:text-white cursor-pointer"
+              ></i>
+              <i
+                class="fa-brands fa-linkedin text-2xl hover:text-white cursor-pointer"
+              ></i>
+              <i
+                class="fa-brands fa-instagram text-2xl hover:text-white cursor-pointer"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="md:col-span-2">
+            <div class="text-xs uppercase tracking-widest mb-6 text-slate-500">
+              Company
+            </div>
+            <div class="space-y-4 text-sm">
+              <div class="hover:text-white cursor-pointer">About Us</div>
+              <div class="hover:text-white cursor-pointer">Careers</div>
+              <div class="hover:text-white cursor-pointer">Blog</div>
+              <div class="hover:text-white cursor-pointer">Press</div>
+            </div>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="md:col-span-2">
+            <div class="text-xs uppercase tracking-widest mb-6 text-slate-500">
+              Support
+            </div>
+            <div class="space-y-4 text-sm">
+              <div class="hover:text-white cursor-pointer">Contact Support</div>
+              <div class="hover:text-white cursor-pointer">Warranty</div>
+              <div class="hover:text-white cursor-pointer">Downloads</div>
+              <div class="hover:text-white cursor-pointer">Shipping Info</div>
+            </div>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="md:col-span-4">
+            <div class="bg-slate-900 rounded-3xl p-8 text-sm">
+              <div class="font-medium text-white mb-4">
+                Free Shipping on all orders over $500
+              </div>
+              <div class="text-xs leading-relaxed">
+                Made with ❤️ in California for the United States of America.<br />©
+                2026 JetPrintX Inc. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="text-[10px] text-slate-600 mt-20 text-center border-t border-slate-800 pt-8"
+        >
+          This is a demo website created for illustration purposes only
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Tailwind script initialization
+      function initializeTailwind() {
+        // Already using CDN with custom styles
+      }
+
+      // Mobile menu toggle
+      let mobileOpen = false;
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobile-menu");
+        const icon = document.getElementById("mobile-menu-btn");
+
+        mobileOpen = !mobileOpen;
+
+        if (mobileOpen) {
+          menu.classList.remove("hidden");
+          icon.innerHTML = `<i class="fa-solid fa-xmark"></i>`;
+        } else {
+          menu.classList.add("hidden");
+          icon.innerHTML = `<i class="fa-solid fa-bars"></i>`;
+        }
+      }
+
+      // Smooth scroll helper
+      function smoothScrollTo(section) {
+        let targetId = section;
+        if (section === "home") targetId = "home";
+
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+        // Close mobile menu if open
+        if (mobileOpen) toggleMobileMenu();
+      }
+
+      // Counter animation
+      function animateCounter(id, target, duration, suffix = "") {
+        let start = 0;
+        const increment = target / (duration / 16);
+        const element = document.getElementById(id);
+
+        const timer = setInterval(() => {
+          start += increment;
+          if (start >= target) {
+            start = target;
+            clearInterval(timer);
+          }
+          element.textContent = Math.floor(start) + suffix;
+        }, 16);
+      }
+
+      function startCounters() {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                // Clients
+                animateCounter("clients", 4872, 1800);
+                // Printers
+                animateCounter("printers", 28491, 2200);
+                // Years
+                animateCounter("years", 15, 800);
+                // Satisfaction
+                animateCounter("satisfaction", 98.7, 1500, "%");
+
+                observer.disconnect();
+              }
+            });
+          },
+          { threshold: 0.6 },
+        );
+
+        const statsSection = document.querySelector("section:has(#clients)");
+        if (statsSection) observer.observe(statsSection);
+      }
+
+      // Fake "add to cart"
+      function addToCart(productId) {
+        const messages = [
+          "Added to cart! 🎉",
+          "Great choice! Proceeding to checkout...",
+          "JetPrintX Pro added — thank you!",
+        ];
+        const randomMsg = messages[Math.floor(Math.random() * messages.length)];
+
+        const toast = document.createElement("div");
+        toast.style.cssText = `
+                position: fixed; bottom: 30px; right: 30px; 
+                background: #f97316; color: white; 
+                padding: 18px 28px; border-radius: 9999px; 
+                box-shadow: 0 25px 50px -12px rgb(249 115 22);
+                font-weight: 600; z-index: 9999; 
+                animation: toastPop 0.4s cubic-bezier(0.34,1.56,0.64,1);
+            `;
+        toast.textContent = randomMsg;
+        document.body.appendChild(toast);
+
+        setTimeout(() => {
+          toast.style.transition = "all 0.4s cubic-bezier(0.4, 0, 1, 1)";
+          toast.style.opacity = "0";
+          toast.style.transform = "translateY(30px)";
+          setTimeout(() => toast.remove(), 400);
+        }, 2800);
+      }
+
+      // Form handling
+      function handleSubmit(e) {
+        e.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+          alert("Please fill out all fields.");
+          return;
+        }
+
+        // Simulate sending
+        const btn = e.target.querySelector("button");
+        const originalText = btn.textContent;
+
+        btn.innerHTML = `
+                <span class="flex items-center justify-center gap-x-3">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    SENDING...
+                </span>
+            `;
+        btn.disabled = true;
+
+        setTimeout(() => {
+          alert(
+            `✅ Thank you, ${name.split(" ")[0]}!\n\nYour quote request has been received.\nA JetPrintX specialist will contact you within the hour.`,
+          );
+
+          // Reset form
+          e.target.reset();
+
+          // Reset button
+          btn.innerHTML = originalText;
+          btn.disabled = false;
+        }, 1450);
+      }
+
+      // Navbar scroll effect
+      function handleNavbarScroll() {
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 80) {
+            navbar.classList.add(
+              "shadow-xl",
+              "bg-white/95",
+              "backdrop-blur-xl",
+            );
+          } else {
+            navbar.classList.remove(
+              "shadow-xl",
+              "bg-white/95",
+              "backdrop-blur-xl",
+            );
+          }
+        });
+      }
+
+      // Keyboard shortcuts (bonus)
+      function keyboardShortcuts() {
+        document.addEventListener("keydown", (e) => {
+          if (e.metaKey && e.key === "k") {
+            e.preventDefault();
+            document
+              .getElementById("contact")
+              .scrollIntoView({ behavior: "smooth" });
+          }
+        });
+      }
+
+      // Initialize everything
+      function initializeWebsite() {
+        initializeTailwind();
+        handleNavbarScroll();
+        startCounters();
+        keyboardShortcuts();
+
+        // Close mobile menu on outside click
+        document.addEventListener("click", function (e) {
+          const menu = document.getElementById("mobile-menu");
+          const btn = document.getElementById("mobile-menu-btn");
+
+          if (
+            !menu.contains(e.target) &&
+            !btn.contains(e.target) &&
+            !menu.classList.contains("hidden")
+          ) {
+            mobileOpen = true;
+            toggleMobileMenu();
+          }
+        });
+
+        // Tailwind script ready
+        console.log(
+          "%c✅ JetPrintX website ready. Premium printing experience loaded.",
+          "color:#f97316; font-family:monospace; font-size:10px",
+        );
+      }
+
+      // Boot the site
+      window.onload = initializeWebsite;
+    </script>
+  </body>
+</html>

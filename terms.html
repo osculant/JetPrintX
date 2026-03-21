@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JetPrintX – Terms and Conditions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet-navy': '#0f172a',
+            'jet-blue': '#1e40af',
+            'jet-accent': '#f97316',
+            'jet-accent-dark': '#ea580c',
+            'jet-gray': '#64748b',
+            'jet-light': '#f8fafc',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .accordion-header {
+      transition: all 0.3s ease;
+    }
+    .accordion-header.active {
+      background-color: rgba(249, 115, 22, 0.08);
+      border-left: 4px solid #f97316;
+    }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+    .accordion-content.open {
+      max-height: 2000px; /* large enough for content */
+      padding-top: 1.5rem;
+      padding-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body class="bg-jet-light text-jet-navy font-sans">
+
+  <!-- ============================================= -->
+  <!--                NAVBAR                         -->
+  <!-- ============================================= -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center shadow-md">
+            <span class="text-white text-2xl font-black tracking-tighter">J</span>
+          </div>
+          <span class="text-3xl font-bold tracking-tight text-jet-navy font-display">JetPrintX</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10 font-medium">
+          <a href="/"          class="hover:text-jet-accent transition-colors">Home</a>
+          <a href="/#about"     class="hover:text-jet-accent transition-colors">About</a>
+          <a href="/products.html"  class="hover:text-jet-accent transition-colors">Products</a>
+          <a href="/services.html"  class="hover:text-jet-accent transition-colors">Services</a>
+          <a href="/terms.html"     class="text-jet-accent transition-colors">Terms</a>
+          <a href="/pp.html"          class="hover:text-jet-accent font-semibold">Privacy</a>
+        </div>
+
+        <!-- Actions + Mobile toggle -->
+        <div class="flex items-center gap-5">
+          <a href="/contact" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-jet-accent text-white font-medium rounded-full hover:bg-jet-accent-dark transition-all shadow-md shadow-orange-200/40">
+            Contact Us <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden text-2xl text-jet-navy">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+        <a href="/" class="hover:text-jet-accent">Home</a>
+        <a href="/#about" class="hover:text-jet-accent">About</a>
+        <a href="/products.html" class="hover:text-jet-accent">Products</a>
+        <a href="/services.html" class="hover:text-jet-accent">Services</a>
+        <a href="/terms.html" class="hover:text-jet-accent">Terms</a>
+        <a href="./pp.html" class="text-jet-accent">Privacy Policy</a>
+        <div class="pt-4">
+          <a href="/contact" class="block py-4 bg-jet-accent text-white text-center rounded-2xl font-semibold">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!--                PAGE HEADER                    -->
+  <!-- ============================================= -->
+  <section class="relative bg-gradient-to-br from-jet-navy via-slate-900 to-jet-blue text-white py-24 lg:py-32">
+    <div class="absolute inset-0 opacity-5 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight mb-5">
+        Terms and Conditions
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto">
+        Please read these terms carefully before using our website, purchasing products, or engaging our services.
+      </p>
+      <p class="mt-6 text-slate-300 text-lg">
+        Last updated: March 1, 2026
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--              MAIN CONTENT                     -->
+  <!-- ============================================= -->
+  <main class="py-16 lg:py-24">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+
+      <div class="prose prose-lg prose-slate max-w-none">
+        <p class="text-jet-gray mb-12 leading-relaxed border-l-4 border-jet-accent pl-6 py-2 bg-white shadow-sm rounded-r-xl">
+          These Terms and Conditions (“Terms”) govern your access to and use of the JetPrintX website (jetprintx.com), products, and services (collectively, the “Services”) provided by JetPrintX Inc., a Delaware corporation (“JetPrintX”, “we”, “us”, or “our”). By accessing or using our Services, you agree to be bound by these Terms.
+        </p>
+
+        <!-- Accordion Sections -->
+        <div class="space-y-6">
+
+          <!-- 1. Introduction -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>1. Introduction</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>These Terms constitute a legally binding agreement between you and JetPrintX. If you are entering into these Terms on behalf of a company or other legal entity, you represent that you have the authority to bind that entity.</p>
+              <p class="mt-4">If you do not agree with any part of these Terms, you may not access or use our Services.</p>
+            </div>
+          </div>
+
+          <!-- 2. Use of Website -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>2. Use of Website</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>You agree to use the website only for lawful purposes and in accordance with these Terms. You may not:</p>
+              <ul class="list-disc pl-6 mt-4 space-y-2">
+                <li>Use the website in any way that violates any applicable federal, state, local or international law</li>
+                <li>Attempt to gain unauthorized access to, interfere with, damage, or disrupt any parts of the website</li>
+                <li>Engage in any conduct that restricts or inhibits anyone’s use or enjoyment of the website</li>
+                <li>Use any robot, spider, or other automatic device to monitor or copy any content</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- 3. Products and Services -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>3. Products and Services</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>All products and services are subject to availability. We reserve the right to discontinue any product or service at any time. While we strive for accuracy, we do not warrant that product descriptions, pricing, or other content is error-free.</p>
+              <p class="mt-4">All printers and consumables are sold subject to manufacturer warranties only. JetPrintX provides no additional express warranties beyond those explicitly stated.</p>
+            </div>
+          </div>
+
+          <!-- 4. Payments and Billing -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>4. Payments and Billing</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>All prices are in United States Dollars (USD) and exclude applicable taxes unless otherwise stated. You are responsible for all taxes associated with your purchases.</p>
+              <p class="mt-4">We accept major credit cards and approved business payment methods. Payment is due at the time of order placement unless credit terms have been pre-approved in writing.</p>
+              <p class="mt-4">Refunds are provided only in accordance with our Return Policy or as required by applicable consumer protection law.</p>
+            </div>
+          </div>
+
+          <!-- 5. Intellectual Property -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>5. Intellectual Property</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>The website, its content, logos, trademarks, and all related intellectual property rights are owned by JetPrintX or its licensors and are protected by United States and international copyright, trademark, and other laws.</p>
+              <p class="mt-4">You are granted a limited, non-exclusive, non-transferable license to access and use the website for personal or internal business purposes only.</p>
+            </div>
+          </div>
+
+          <!-- 6. Limitation of Liability -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>6. Limitation of Liability</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>To the fullest extent permitted by law, JetPrintX shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of profits, data, or goodwill, arising from your use of the Services.</p>
+              <p class="mt-4">In no event shall our total liability exceed the amount you paid us in the twelve (12) months preceding the claim.</p>
+            </div>
+          </div>
+
+          <!-- 7. Governing Law -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>7. Governing Law and Jurisdiction</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>These Terms shall be governed by and construed in accordance with the laws of the State of Delaware, United States, without regard to its conflict of law principles.</p>
+              <p class="mt-4">Any disputes arising out of or relating to these Terms shall be resolved exclusively in the state or federal courts located in New Castle County, Delaware.</p>
+            </div>
+          </div>
+
+          <!-- 8. Modifications -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>8. Modifications to Terms</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>We reserve the right to modify these Terms at any time. We will notify you of material changes by posting the updated Terms on this page and updating the “Last updated” date.</p>
+              <p class="mt-4">Your continued use of the Services after such changes constitutes your acceptance of the revised Terms.</p>
+            </div>
+          </div>
+
+          <!-- 9. Contact Information -->
+          <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+            <button class="accordion-header w-full px-8 py-6 text-left flex justify-between items-center font-semibold text-xl hover:bg-orange-50/50 transition-colors">
+              <span>9. Contact Us</span>
+              <i class="fa-solid fa-chevron-down transition-transform"></i>
+            </button>
+            <div class="accordion-content px-8 pb-0 text-jet-gray leading-relaxed">
+              <p>If you have any questions about these Terms, please contact us at:</p>
+              <div class="mt-6 space-y-3">
+                <p><strong>JetPrintX Inc.</strong><br>
+                   123 Innovation Way<br>
+                   Palo Alto, CA 94301<br>
+                   United States
+                </p>
+                <p><strong>Email:</strong> <a href="mailto:legal@jetprintx.com" class="text-jet-accent hover:underline">legal@jetprintx.com</a></p>
+                <p><strong>Phone:</strong> 1-800-JET-PRINT</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-16 p-8 bg-white rounded-2xl shadow-sm border border-slate-200 text-center">
+          <h3 class="text-2xl font-semibold mb-4">Questions about our Terms?</h3>
+          <p class="text-jet-gray mb-8">Our legal team is happy to assist you.</p>
+          <a href="/contact" class="inline-flex items-center gap-3 px-10 py-5 bg-jet-accent text-white font-bold text-lg rounded-full hover:bg-jet-accent-dark transition-all shadow-lg shadow-orange-200/40">
+            Contact Legal Team <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ============================================= -->
+  <!--                  FOOTER                       -->
+  <!-- ============================================= -->
+  <footer class="bg-jet-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3 mb-6 text-white">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center">
+              <span class="text-white text-2xl font-black">J</span>
+            </div>
+            <span class="text-2xl font-bold font-display">JetPrintX</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-8">
+            Premium printing solutions engineered for American businesses.
+          </p>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-white font-semibold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/about" class="hover:text-jet-accent transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Careers</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Legal</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="text-jet-accent font-medium">Terms & Conditions</a></li>
+            <li><a href="/privacy" class="hover:text-jet-accent transition-colors">Privacy Policy</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Cookie Policy</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="/contact" class="hover:text-jet-accent transition-colors">Contact Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Support Center</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-slate-700 text-center text-sm">
+        © 2026 JetPrintX Inc. • All rights reserved • Delaware, United States
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Accordion functionality
+    document.querySelectorAll('.accordion-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        const isOpen = content.classList.contains('open');
+
+        // Close all others
+        document.querySelectorAll('.accordion-content').forEach(c => {
+          c.classList.remove('open');
+          c.style.maxHeight = null;
+          c.previousElementSibling.classList.remove('active');
+        });
+
+        // Toggle current
+        if (!isOpen) {
+          content.classList.add('open');
+          content.style.maxHeight = content.scrollHeight + 'px';
+          header.classList.add('active');
+        }
+      });
+    });
+
+    // Open first section by default (optional)
+    document.querySelector('.accordion-header')?.click();
+  </script>
+</body>
+</html>

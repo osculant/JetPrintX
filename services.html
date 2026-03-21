@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JetPrintX – Professional Printing Services</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'jet-navy': '#0f172a',
+            'jet-blue': '#1e40af',
+            'jet-accent': '#f97316',
+            'jet-accent-dark': '#ea580c',
+            'jet-gray': '#64748b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Poppins', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .service-card {
+      transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px -10px rgba(15, 23, 42, 0.12);
+    }
+    .step-circle {
+      transition: all 0.4s ease;
+    }
+    .step:hover .step-circle {
+      transform: scale(1.15);
+      box-shadow: 0 0 0 12px rgba(249, 115, 22, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-slate-50 text-jet-navy font-sans">
+
+  <!-- ============================================= -->
+  <!--                NAVBAR                         -->
+  <!-- ============================================= -->
+  <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-slate-200 shadow-sm">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <!-- Logo -->
+        <a href="/" class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center shadow-md">
+            <span class="text-white text-2xl font-black tracking-tighter">J</span>
+          </div>
+          <span class="text-3xl font-bold tracking-tight text-jet-navy font-display">JetPrintX</span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden lg:flex items-center gap-10 font-medium">
+          <a href="/"          class="hover:text-jet-accent transition-colors">Home</a>
+          <a href="/#about"     class="hover:text-jet-accent transition-colors">About</a>
+          <a href="/products.html"  class="hover:text-jet-accent transition-colors">Products</a>
+          <a href="/services.html"  class="text-jet-accent transition-colors">Services</a>
+          <a href="/terms.html"     class="hover:text-jet-accent transition-colors">Terms</a>
+          <a href="/pp.html"          class="hover:text-jet-accent font-semibold">Privacy</a>
+        </div>
+
+        <!-- Actions + Mobile toggle -->
+        <div class="flex items-center gap-5">
+          <a href="/contact" class="hidden md:inline-flex items-center gap-2 px-6 py-3 bg-jet-accent text-white font-medium rounded-full hover:bg-jet-accent-dark transition-all shadow-md shadow-orange-200/40">
+            Contact Us <i class="fa-solid fa-arrow-right ml-1"></i>
+          </a>
+          <button id="mobile-menu-btn" class="lg:hidden text-2xl text-jet-navy">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t">
+      <div class="px-6 py-8 flex flex-col gap-6 text-lg font-medium">
+        <a href="/" class="hover:text-jet-accent">Home</a>
+        <a href="/#about" class="hover:text-jet-accent">About</a>
+        <a href="/products.html" class="hover:text-jet-accent">Products</a>
+        <a href="/services.html" class="hover:text-jet-accent">Services</a>
+        <a href="/terms.html" class="hover:text-jet-accent">Terms</a>
+        <a href="./pp.html" class="text-jet-accent">Privacy Policy</a>
+        <div class="pt-4">
+          <a href="/contact" class="block py-4 bg-jet-accent text-white text-center rounded-2xl font-semibold">
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================= -->
+  <!--                HERO                           -->
+  <!-- ============================================= -->
+  <section class="relative bg-gradient-to-br from-jet-navy via-slate-900 to-jet-blue text-white py-28 lg:py-40 overflow-hidden">
+    <div class="absolute inset-0 opacity-10 pointer-events-none">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(249,115,22,0.2),transparent_50%)]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-display tracking-tight mb-6 leading-tight">
+        Professional Printing Services
+      </h1>
+      <p class="text-xl sm:text-2xl text-slate-200 max-w-3xl mx-auto mb-10">
+        Reliable • Fast • Scalable — Tailored printing solutions for American businesses of every size
+      </p>
+      <a href="#contact" class="inline-flex items-center gap-3 px-10 py-5 bg-white text-jet-navy font-bold text-lg rounded-full hover:bg-slate-100 transition-all shadow-2xl shadow-black/25">
+        Get Your Free Quote <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--          SERVICES GRID                        -->
+  <!-- ============================================= -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold font-display tracking-tight mb-5">Comprehensive Printing Services</h2>
+        <p class="text-xl text-jet-gray max-w-3xl mx-auto">
+          From installation to managed fleets — we handle every aspect of your printing infrastructure
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+        <!-- Service 1 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-screwdriver-wrench"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Installation & Setup</h3>
+          <p class="text-jet-gray mb-6">
+            Professional on-site installation, network integration, driver setup and staff training — ready to print on day one.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-tools"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Maintenance & Repair</h3>
+          <p class="text-jet-gray mb-6">
+            Preventive maintenance plans and next-business-day repair service across the continental United States.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-chart-line"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Managed Print Services</h3>
+          <p class="text-jet-gray mb-6">
+            Complete fleet management — monitoring, supplies, optimization, and cost reduction — pay only for what you print.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Service 4 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-boxes-stacked"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Bulk & Commercial Printing</h3>
+          <p class="text-jet-gray mb-6">
+            High-volume offset & digital printing — brochures, manuals, labels, packaging — fast turnaround & competitive pricing.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-paintbrush"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Custom Printing Solutions</h3>
+          <p class="text-jet-gray mb-6">
+            Personalized marketing materials, variable data printing, wide-format banners, branded merchandise.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+
+        <!-- Service 6 -->
+        <div class="service-card bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-jet-accent/30 group">
+          <div class="w-14 h-14 bg-jet-accent/10 rounded-xl flex items-center justify-center mb-6 text-jet-accent text-3xl group-hover:scale-110 transition-transform">
+            <i class="fa-solid fa-cloud"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-3">Cloud & Wireless Setup</h3>
+          <p class="text-jet-gray mb-6">
+            Secure cloud printing, mobile printing, Apple AirPrint, Google Cloud Print alternative — anywhere access.
+          </p>
+          <a href="#detailed-services" class="text-jet-accent font-medium hover:underline flex items-center gap-2">
+            Learn More <i class="fa-solid fa-arrow-right text-sm"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--          DETAILED SERVICES                    -->
+  <!-- ============================================= -->
+  <section id="detailed-services" class="py-20 lg:py-28 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 space-y-28">
+
+      <!-- Service Detail 1 -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <h2 class="text-4xl font-bold font-display mb-6">Managed Print Services (MPS)</h2>
+          <p class="text-lg text-jet-gray mb-8 leading-relaxed">
+            Eliminate print-related headaches. We proactively manage your entire printer fleet — monitoring usage, automating supplies, optimizing devices, and reducing costs by 20–40% on average.
+          </p>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Real-time fleet visibility & analytics dashboard</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Automatic toner/ink replenishment — never run out</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Secure print release & follow-me printing</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Predictive maintenance — fewer breakdowns</span>
+            </li>
+          </ul>
+          <a href="#contact" class="mt-10 inline-flex items-center gap-3 px-8 py-4 bg-jet-accent text-white font-semibold rounded-xl hover:bg-jet-accent-dark transition-all">
+            Request MPS Assessment <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl">
+          <img src="https://images.unsplash.com/photo-1556155099-870aadc39283?w=800" alt="Managed Print Dashboard" class="w-full h-full object-cover">
+        </div>
+      </div>
+
+      <!-- Service Detail 2 -->
+      <div class="grid lg:grid-cols-2 gap-16 items-center lg:flex-row-reverse">
+        <div class="order-2 lg:order-1">
+          <h2 class="text-4xl font-bold font-display mb-6">Maintenance & Repair</h2>
+          <p class="text-lg text-jet-gray mb-8 leading-relaxed">
+            Keep your printers running at peak performance with our comprehensive maintenance programs and rapid-response repair service.
+          </p>
+          <ul class="space-y-4 text-lg">
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Next-business-day on-site response in most areas</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Certified JetPrintX & manufacturer-trained technicians</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Preventive maintenance visits reduce downtime by up to 70%</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <i class="fa-solid fa-check-circle text-jet-accent text-xl mt-1"></i>
+              <span>Loaner equipment available during major repairs</span>
+            </li>
+          </ul>
+          <a href="#contact" class="mt-10 inline-flex items-center gap-3 px-8 py-4 border-2 border-jet-accent text-jet-accent font-semibold rounded-xl hover:bg-jet-accent hover:text-white transition-all">
+            Schedule Maintenance <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2">
+          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=800" alt="Technician repairing printer" class="w-full h-full object-cover">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--             HOW IT WORKS                      -->
+  <!-- ============================================= -->
+  <section class="py-20 lg:py-28 bg-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold font-display tracking-tight">How It Works</h2>
+      </div>
+
+      <div class="grid md:grid-cols-4 gap-8 lg:gap-6 relative">
+        <!-- Connecting line (desktop) -->
+        <div class="hidden md:block absolute top-12 left-0 right-0 h-0.5 bg-gradient-to-r from-jet-accent/30 via-jet-accent to-jet-accent/30"></div>
+
+        <div class="relative text-center step">
+          <div class="step-circle w-20 h-20 mx-auto rounded-full bg-jet-accent text-white flex items-center justify-center text-3xl font-bold mb-6 shadow-lg relative z-10">1</div>
+          <h3 class="text-xl font-semibold mb-3">Request Service</h3>
+          <p class="text-jet-gray">Submit your needs via form, phone or email</p>
+        </div>
+
+        <div class="relative text-center step">
+          <div class="step-circle w-20 h-20 mx-auto rounded-full bg-jet-accent text-white flex items-center justify-center text-3xl font-bold mb-6 shadow-lg relative z-10">2</div>
+          <h3 class="text-xl font-semibold mb-3">Consultation</h3>
+          <p class="text-jet-gray">Free assessment & tailored solution proposal</p>
+        </div>
+
+        <div class="relative text-center step">
+          <div class="step-circle w-20 h-20 mx-auto rounded-full bg-jet-accent text-white flex items-center justify-center text-3xl font-bold mb-6 shadow-lg relative z-10">3</div>
+          <h3 class="text-xl font-semibold mb-3">Execution</h3>
+          <p class="text-jet-gray">Professional setup, installation or repair</p>
+        </div>
+
+        <div class="relative text-center step">
+          <div class="step-circle w-20 h-20 mx-auto rounded-full bg-jet-accent text-white flex items-center justify-center text-3xl font-bold mb-6 shadow-lg relative z-10">4</div>
+          <h3 class="text-xl font-semibold mb-3">Ongoing Support</h3>
+          <p class="text-jet-gray">Monitoring, supplies & continuous optimization</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--             WHY CHOOSE US                     -->
+  <!-- ============================================= -->
+  <section class="py-20 lg:py-28 bg-gradient-to-br from-jet-navy to-jet-blue text-white">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold font-display">Why American Businesses Choose JetPrintX</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="text-5xl mb-6 text-jet-accent"><i class="fa-solid fa-clock"></i></div>
+          <h3 class="text-2xl font-semibold mb-4">Next-Day Response</h3>
+          <p class="text-slate-200">On-site service in most metro areas within 24 business hours</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="text-5xl mb-6 text-jet-accent"><i class="fa-solid fa-certificate"></i></div>
+          <h3 class="text-2xl font-semibold mb-4">Certified Experts</h3>
+          <p class="text-slate-200">Factory-trained technicians with ongoing manufacturer certifications</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="text-5xl mb-6 text-jet-accent"><i class="fa-solid fa-dollar-sign"></i></div>
+          <h3 class="text-2xl font-semibold mb-4">Transparent Pricing</h3>
+          <p class="text-slate-200">No hidden fees — clear contracts and volume-based discounts</p>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center border border-white/10">
+          <div class="text-5xl mb-6 text-jet-accent"><i class="fa-solid fa-map-marker-alt"></i></div>
+          <h3 class="text-2xl font-semibold mb-4">Nationwide Coverage</h3>
+          <p class="text-slate-200">Service in all 50 states through our trusted partner network</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--               CTA + CONTACT                   -->
+  <!-- ============================================= -->
+  <section id="contact" class="py-20 lg:py-28 bg-white">
+    <div class="max-w-5xl mx-auto px-5 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl lg:text-5xl font-bold font-display mb-6">Ready to Optimize Your Printing?</h2>
+        <p class="text-xl text-jet-gray max-w-3xl mx-auto">
+          Speak with a printing solutions specialist today — no obligation, no pressure.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-5 gap-12 items-start">
+        <!-- Left – Contact Info -->
+        <div class="lg:col-span-2 space-y-10">
+          <div class="flex gap-6">
+            <div class="text-4xl text-jet-accent"><i class="fa-solid fa-phone-volume"></i></div>
+            <div>
+              <div class="font-semibold text-lg">1-800-JET-PRINT</div>
+              <div class="text-jet-gray">Mon–Fri 7AM–8PM EST</div>
+            </div>
+          </div>
+
+          <div class="flex gap-6">
+            <div class="text-4xl text-jet-accent"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <div class="font-semibold text-lg">service@jetprintx.com</div>
+              <div class="text-jet-gray">Typical reply within 2 hours</div>
+            </div>
+          </div>
+
+          <div class="pt-6 border-t border-slate-200">
+            <div class="text-sm text-jet-gray flex items-center gap-2">
+              <i class="fa-solid fa-shield-halved text-jet-accent"></i>
+              <span>All communications are encrypted & US-based</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right – Form -->
+        <div class="lg:col-span-3">
+          <form id="service-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label class="block text-sm font-medium mb-2">Full Name *</label>
+                <input type="text" id="name" required class="w-full px-5 py-4 border border-slate-300 rounded-xl focus:border-jet-accent focus:ring-1 focus:ring-jet-accent outline-none transition-all">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-2">Business Email *</label>
+                <input type="email" id="email" required class="w-full px-5 py-4 border border-slate-300 rounded-xl focus:border-jet-accent focus:ring-1 focus:ring-jet-accent outline-none transition-all">
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Service Interested In</label>
+              <select id="service" class="w-full px-5 py-4 border border-slate-300 rounded-xl focus:border-jet-accent focus:ring-1 focus:ring-jet-accent outline-none bg-white">
+                <option value="">Please select...</option>
+                <option value="mps">Managed Print Services</option>
+                <option value="maintenance">Maintenance & Repair</option>
+                <option value="installation">Installation & Setup</option>
+                <option value="bulk">Bulk / Commercial Printing</option>
+                <option value="custom">Custom Printing Solutions</option>
+                <option value="cloud">Cloud & Wireless Setup</option>
+                <option value="other">Other / Consultation</option>
+              </select>
+            </div>
+
+            <div>
+              <label class="block text-sm font-medium mb-2">Tell us about your needs *</label>
+              <textarea id="message" rows="5" required class="w-full px-5 py-4 border border-slate-300 rounded-xl focus:border-jet-accent focus:ring-1 focus:ring-jet-accent outline-none resize-none transition-all"></textarea>
+            </div>
+
+            <button type="submit" class="w-full py-6 bg-gradient-to-r from-jet-accent to-orange-600 text-white font-bold text-lg rounded-2xl shadow-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+              REQUEST SERVICE CONSULTATION
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================= -->
+  <!--                  FOOTER                       -->
+  <!-- ============================================= -->
+  <footer class="bg-jet-navy text-slate-300">
+    <div class="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 py-16">
+      <div class="grid md:grid-cols-12 gap-12">
+        <div class="md:col-span-4">
+          <div class="flex items-center gap-3 mb-6 text-white">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-jet-accent to-orange-600 flex items-center justify-center">
+              <span class="text-white text-2xl font-black">J</span>
+            </div>
+            <span class="text-2xl font-bold font-display">JetPrintX</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-8">
+            Premium printing hardware & professional services — engineered for American businesses.
+          </p>
+          <div class="flex gap-6 text-2xl">
+            <i class="fa-brands fa-linkedin hover:text-jet-accent cursor-pointer transition-colors"></i>
+            <i class="fa-brands fa-x-twitter hover:text-jet-accent cursor-pointer transition-colors"></i>
+            <i class="fa-brands fa-facebook hover:text-jet-accent cursor-pointer transition-colors"></i>
+          </div>
+        </div>
+
+        <div class="md:col-span-2">
+          <h4 class="text-white font-semibold mb-6">Company</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-jet-accent transition-colors">About Us</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Newsroom</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Services</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Managed Print Services</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Maintenance & Repair</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Installation & Setup</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Bulk Printing</a></li>
+          </ul>
+        </div>
+
+        <div class="md:col-span-3">
+          <h4 class="text-white font-semibold mb-6">Support</h4>
+          <ul class="space-y-3 text-sm">
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Contact Support</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Knowledge Base</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Warranty Information</a></li>
+            <li><a href="#" class="hover:text-jet-accent transition-colors">Service Locations</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="mt-16 pt-10 border-t border-slate-700 text-center text-sm">
+        © 2026 JetPrintX Inc. • All rights reserved • Made with precision for the United States market
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileBtn.querySelector('i');
+      icon.classList.toggle('fa-bars');
+      icon.classList.toggle('fa-xmark');
+    });
+
+    // Form validation & fake submission
+    document.getElementById('service-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      if (!name || !email || !message) {
+        alert('Please fill in all required fields.');
+        return;
+      }
+
+      const btn = this.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin mr-2"></i> SENDING...';
+      btn.disabled = true;
+
+      setTimeout(() => {
+        alert(`Thank you, ${name.split(' ')[0]}!\n\nYour service request has been received. A JetPrintX specialist will contact you within 2 business hours.`);
+
+        this.reset();
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }, 1400);
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
