@@ -872,7 +872,7 @@
 
           <div class="lg:col-span-7">
             <form
-              id="contact-form"
+              id="contactForm"
               onsubmit="handleSubmit(event)"
               class="bg-white/[0.02] border border-white/10 p-8 md:p-12 rounded-[2.5rem] backdrop-blur-xl"
             >
@@ -882,6 +882,7 @@
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       required
                       placeholder=" "
                       class="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-orange-500 transition-colors placeholder-transparent"
@@ -896,6 +897,7 @@
                     <input
                       type="email"
                       id="email"
+                      name="email"
                       required
                       placeholder=" "
                       class="peer w-full bg-transparent border-b border-white/20 py-4 outline-none focus:border-orange-500 transition-colors placeholder-transparent"
@@ -974,7 +976,7 @@
                 </div>
 
                 <button
-                  type="submit"
+                  type="submit" id="submitBtn"
                   class="group relative w-full overflow-hidden rounded-2xl bg-orange-500 py-6 font-bold text-black transition-all hover:bg-orange-400 active:scale-[0.98]"
                 >
                   <div
@@ -1191,45 +1193,6 @@
         }, 2800);
       }
 
-      // Form handling
-      function handleSubmit(e) {
-        e.preventDefault();
-
-        const name = document.getElementById("name").value.trim();
-        const email = document.getElementById("email").value.trim();
-        const message = document.getElementById("message").value.trim();
-
-        if (!name || !email || !message) {
-          alert("Please fill out all fields.");
-          return;
-        }
-
-        // Simulate sending
-        const btn = e.target.querySelector("button");
-        const originalText = btn.textContent;
-
-        btn.innerHTML = `
-                <span class="flex items-center justify-center gap-x-3">
-                    <i class="fa-solid fa-spinner fa-spin"></i>
-                    SENDING...
-                </span>
-            `;
-        btn.disabled = true;
-
-        setTimeout(() => {
-          alert(
-            `✅ Thank you, ${name.split(" ")[0]}!\n\nYour quote request has been received.\nA JetPrintX specialist will contact you within the hour.`,
-          );
-
-          // Reset form
-          e.target.reset();
-
-          // Reset button
-          btn.innerHTML = originalText;
-          btn.disabled = false;
-        }, 1450);
-      }
-
       // Navbar scroll effect
       function handleNavbarScroll() {
         const navbar = document.getElementById("navbar");
@@ -1294,6 +1257,67 @@
 
       // Boot the site
       window.onload = initializeWebsite;
+    </script>
+
+                <script>
+      const form = document.getElementById("contactForm");
+      const submitBtn = document.getElementById("submitBtn");
+
+      if (!form || !submitBtn) {
+        console.error("Form or button not found! Check IDs.");
+      }
+
+      form.addEventListener("submit", async function (e) {
+        e.preventDefault();
+
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = "Sending...";
+        submitBtn.disabled = true;
+
+        // Only name + email + source
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+
+        const payload = {
+          name: data.name || "",
+          email: data.email || "",
+          source: "Printer Enquiry",
+        };
+
+        const scriptURL =
+          "https://script.google.com/macros/s/AKfycbxbbTn2EAIny8K04H4DcdeImFDo3cInttOxDZ0iJwU7Zhn2JivahEsho_RcXDNhDJM2/exec";
+
+        try {
+          const response = await fetch(scriptURL, {
+            method: "POST",
+            body: new URLSearchParams(payload), // form-urlencoded (no preflight)
+            headers: {
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+          });
+
+          const resultText = await response.text();
+          console.log("Response:", resultText);
+
+          if (
+            resultText.trim() === "Success" ||
+            resultText.toLowerCase().includes("success")
+          ) {
+            alert("✅ Thank you! Your information has been received.");
+            form.reset();
+          } else {
+            alert("❌ Something went wrong. Server said: " + resultText);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert(
+            "❌ Connection error. Please check your internet and try again.",
+          );
+        }
+
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      });
     </script>
   </body>
 </html>
